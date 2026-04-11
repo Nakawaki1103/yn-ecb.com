@@ -76,6 +76,27 @@ docs/
 
 ---
 
+---
+
+## セッション 3 — 2026-04-11
+
+### 完了したこと
+
+- Laravelプロジェクト作成（`src/` ディレクトリ、Laravel 13.4.0）
+- Docker Desktop インストール・動作確認
+- `docker-compose.yml` 作成（MySQL 8.0コンテナ）
+- `.env` をSQLiteからMySQLに切り替え
+
+### 学んだこと・気づき
+
+- `.env` の書き換えだけではダメ。接続先のMySQLそのものを用意する必要がある
+- DockerはMySQLをプロジェクト単位で管理する手段（Macをグローバルに汚さない）
+- `docker compose up -d` の `-d` はバックグラウンド起動（detached mode）
+- `ports: "3306:3306"` = Mac側のポート → コンテナ内のポート
+- `volumes` を使わないとコンテナ停止のたびにDBのデータが消える
+
+---
+
 ## 次回の続き
 
-- [ ] Laravelプロジェクト作成（環境構築フェーズへ）
+- [ ] `php artisan migrate` でMySQLにテーブル作成
