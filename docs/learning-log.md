@@ -97,6 +97,28 @@ docs/
 
 ---
 
+---
+
+## セッション 3 — 2026-04-13
+
+### 完了したこと
+
+- Homebrew MySQLが裏で動いていてDockerのMySQLに繋がらない問題を解決（`brew services stop mysql`）
+- `php artisan migrate` でデフォルトテーブル作成確認
+- マイグレーションファイル作成（offices / users / notices / mail_logs）
+- `php artisan migrate` で全テーブル作成完了
+
+### 学んだこと・気づき
+
+- `.env` の `DB_HOST=127.0.0.1` を指定してもPHPがローカルのMySQLソケット（`/tmp/mysql.sock`）を使うことがある
+- Homebrewで別のMySQLが起動していると競合する
+- マイグレーションファイルのタイムスタンプが同じだと実行順序が保証されない → FKの参照先が存在しないエラーになる
+- `foreignId('カラム名')->constrained()` はテーブル名を自動推測。命名規則（テーブル単数形_id）から外れる場合は `constrained('テーブル名')` で明示する
+- `softDeletes()` で `deleted_at` カラムを追加、論理削除が使えるようになる
+- `text()` は長文カラム（本文など）に使う、`string()` はデフォルト255文字のvarchar
+
+---
+
 ## 次回の続き
 
-- [ ] `php artisan migrate` でMySQLにテーブル作成
+- [ ] 認証機能（ログイン・ログアウト）から実装フェーズ開始

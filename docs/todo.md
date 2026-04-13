@@ -15,7 +15,7 @@
 - [ ] Laravelデプロイ（手動）
 
 ## 実装フェーズ
-- [ ] マイグレーション作成（offices / users / notices / mail_logs）
+- [x] マイグレーション作成（offices / users / notices / mail_logs）
 - [ ] 認証機能（ログイン・ログアウト）
 - [ ] ロール制御（member / admin / sysAdmin）
 - [ ] 反響一覧・詳細画面
