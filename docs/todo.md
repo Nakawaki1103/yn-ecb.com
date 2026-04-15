@@ -8,16 +8,17 @@
 - [x] インフラ構成
 
 ## 環境構築フェーズ
-- [ ] Laravelプロジェクト作成
-- [ ] Docker環境構築（ローカル開発用）
+- [x] Laravelプロジェクト作成
+- [x] Docker環境構築（ローカル開発用）
 - [ ] AWSリソース作成（VPC / EC2 / RDS）
 - [ ] Nginx設定
 - [ ] Laravelデプロイ（手動）
 
 ## 実装フェーズ
 - [x] マイグレーション作成（offices / users / notices / mail_logs）
-- [ ] 認証機能（ログイン・ログアウト）
-- [ ] ロール制御（member / admin / sysAdmin）
+- [x] 認証機能（ログイン・ログアウト）※Laravel Breeze使用
+- [x] /registerを無効化（ユーザーは管理者が作成する設計）
+- [ ] ロール制御（member / admin / sysAdmin）← 進行中
 - [ ] 反響一覧・詳細画面
 - [ ] ステータス変更機能
 - [ ] メール送信・受信履歴機能
