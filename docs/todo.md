@@ -27,6 +27,12 @@
 
 ## メイン機能
 - [ ] 反響受信API（外部からPOSTを受け取りnoticesテーブルに登録）
+  - [x] Noticeモデル作成・fillable設定
+  - [x] NoticeRepository 雛形作成
+  - [ ] NoticeRepository create()実装
+  - [ ] NoticeLogic作成
+  - [ ] NoticeController作成
+  - [ ] routes/api.php設定
 
 ## できればやる
 - [ ] GitHub ActionsでCI/CDパイプライン構築
